@@ -1,0 +1,56 @@
+﻿<UserControl x:Name="userControl" x:Class="TaskBigControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Scheduler"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="320" Height="200" Margin="6,10,5,10">
+    <UserControl.Resources>
+        <Storyboard x:Key="fadein">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="userControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="fadeout">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="userControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.99"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Border x:Name="baseborder" BorderBrush="#FFB06C6C" BorderThickness="5,0,0,0" Background="White" CornerRadius="5 ">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="1" Color="#66E8E8E8"/>
+        </Border.Effect>
+        <Grid x:Name="basegrid" Background="#00000000" UseLayoutRounding="False">
+            <Label x:Name="titlebox" Content="물리학" HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac Bold" FontSize="20" Foreground="Black" Padding="0,5,5,5"/>
+            <Label x:Name="timelab" Content="22:0" HorizontalAlignment="Left" Margin="18,54,0,0" VerticalAlignment="Top" Padding="0" FontFamily="나눔스퀘어_ac Light" Foreground="#FF6A6A6A" FontSize="14"/>
+            <WrapPanel x:Name="basewrap" HorizontalAlignment="Center" Margin="18,85,17,10" VerticalAlignment="Top" Width="280" Background="#00000000">
+                <Border x:Name="zoomborder" BorderBrush="Black" BorderThickness="0" Height="30" Width="280" Margin="0,0,0,4" CornerRadius="6" Background="#FFF0F0F0">
+                    <Grid Background="#00000000">
+                        <Image HorizontalAlignment="Left" Height="18" Margin="6,0,0,0" VerticalAlignment="Center" Width="18" Source="imagesource/zoomicon.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Label x:Name="zoomlab" Content="Label" HorizontalAlignment="Left" Height="18" Margin="29,6,0,0" VerticalAlignment="Top" Width="241" Padding="0" FontFamily="나눔스퀘어_ac" VerticalContentAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Border x:Name="linkborder" BorderBrush="Black" BorderThickness="0" Height="30" Width="280" Margin="0,0,0,4" CornerRadius="6" Background="#FFF0F0F0">
+                    <Grid Background="#00000000">
+                        <Image HorizontalAlignment="Left" Height="14" Margin="8,8,0,8" VerticalAlignment="Center" Width="14" Source="imagesource/linked.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Label x:Name="linklab" Content="Label" HorizontalAlignment="Left" Height="18" Margin="29,6,0,0" VerticalAlignment="Top" Width="241" Padding="0" FontFamily="나눔스퀘어_ac" VerticalContentAlignment="Center"/>
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0" Height="30" Width="280" Margin="0,0,0,0" CornerRadius="6" Background="#FFF0F0F0" MouseDown="Border_MouseDown">
+                    <Grid Background="#00000000">
+                        <Image HorizontalAlignment="Left" Height="14" Margin="8,8,0,8" VerticalAlignment="Center" Width="14" Source="imagesource/editicon.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Label x:Name="editlab" Content="편집" HorizontalAlignment="Left" Height="18" Margin="29,6,0,0" VerticalAlignment="Top" Width="241" Padding="0" FontFamily="나눔스퀘어_ac" VerticalContentAlignment="Center"/>
+                    </Grid>
+                </Border>
+            </WrapPanel>
+        </Grid>
+    </Border>
+</UserControl>

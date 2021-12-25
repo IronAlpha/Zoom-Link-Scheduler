@@ -1,0 +1,113 @@
+﻿<Page x:Class="settingpage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Scheduler"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="settingpage" Width="300" Height="900" Loaded="Page_Loaded">
+    <WrapPanel>
+        <Label Content="줌" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0"/>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" MouseDown="Border_MouseDown_1">
+            <Grid Background="#00000000">
+                <Label Content="줌 입장 이름 바꾸기" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="278" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <Label x:Name="namelab" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="140" Padding="10,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="138,0,0,0" HorizontalContentAlignment="Right" FontSize="10" Foreground="#FF9B9B9B"/>
+            </Grid>
+        </Border>
+        <Label Content="자동 시작" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,10,0,0" />
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="자동 줌 시작" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="autozoomtog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_2"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="자동 링크 시작" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="autolinktog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_3"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" MouseDown="Border_MouseDown">
+            <Grid Background="#00000000">
+                <Label Content="자동 시작 시간 바꾸기" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="268" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <Label x:Name="autominlab" Content="3분" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="140" Padding="10,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" HorizontalContentAlignment="Right" FontSize="10" Foreground="#FF9B9B9B" Margin="0"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="자동 시작 전 확인" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="autostartdialogtog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58"/>
+            </Grid>
+        </Border>
+        <Label Content="표시" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,10,0,0" />
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="24시 형식 사용" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="use24tog" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click">
+                    <local:classcontrol Height="100" Width="100"/>
+                </ToggleButton>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="영어로 표시" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="disEngtog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_1"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="시간 가로 구분선 사용" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="usehortimeseptog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_4"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="일정 시작 구분선 사용 (정시 제외)" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="taskseptog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_6"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="그림자 사용" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="useshadowtog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_7"/>
+            </Grid>
+        </Border>
+        <Label Content="업데이트" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,10,0,0" Visibility="Collapsed"/>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" Visibility="Collapsed">
+            <Grid Background="#00000000">
+                <Label Content="자동 업데이트 사용" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="useautoupdatetog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_5"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" Visibility="Collapsed">
+            <Grid Background="#00000000">
+                <Label Content="수동 업데이트 확인" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="268" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <Label x:Name="updatelab" Content="1.0.0.0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="40" Width="140" Padding="10,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" HorizontalContentAlignment="Right" FontSize="10" Foreground="#FF9B9B9B" Margin="0"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,-51,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" Visibility="Collapsed">
+            <Grid Background="#00000000">
+                <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58"/>
+            </Grid>
+        </Border>
+        <Label Content="기타" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,10,0,0"/>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White">
+            <Grid Background="#00000000">
+                <Label Content="종료시 작업 표시줄로 최소화" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+                <ToggleButton x:Name="hidetskbtog" Content="ToggleButton" HorizontalAlignment="Left" Margin="220,12,0,12" VerticalAlignment="Center" Height="16" Width="58" Click="ToggleButton_Click_5"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" MouseDown="Border_MouseDown_2">
+            <Grid Background="#00000000">
+                <Label Content="정보" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="278" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="#FF005DFF" BorderThickness="2,0,0,0" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" VerticalAlignment="Top" Width="280" CornerRadius="3" Background="White" Visibility="Hidden">
+            <Grid Background="#00000000">
+                <Label Content="초기화" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="278" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac"/>
+            </Grid>
+        </Border>
+    </WrapPanel>
+</Page>

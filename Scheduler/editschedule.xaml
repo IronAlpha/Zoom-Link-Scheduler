@@ -1,0 +1,48 @@
+﻿<Page x:Class="editschedule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Scheduler"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="editpage" Width="300" Height="900">
+    <Grid>
+        <WrapPanel>
+            <Label Content="제목" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0"/>
+            <Grid Background="White" Height="40" Width="300">
+                <TextBox x:Name="titlebox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Padding="10,0,0,0" FontFamily="나눔스퀘어_ac" BorderThickness="0"/>
+            </Grid>
+            <Label Content="요일" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0"/>
+            <ComboBox x:Name="DOWCOMBO" Width="300" Height="40" Background="White" BorderBrush="White" IsReadOnly="True" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac">
+                <ComboBoxItem Content="일"/>
+                <ComboBoxItem Content="월"/>
+                <ComboBoxItem Content="화"/>
+                <ComboBoxItem Content="수"/>
+                <ComboBoxItem Content="목"/>
+                <ComboBoxItem Content="금"/>
+                <ComboBoxItem Content="토"/>
+            </ComboBox>
+            <Label Content="시작 시간 (24시 형식)" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0"/>
+            <Grid Background="White" Height="40" Width="300">
+                <TextBox x:Name="sttimebox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Padding="10,0,0,0" FontFamily="나눔스퀘어_ac" BorderThickness="0"/>
+            </Grid>
+            <Label Content="끝나는 시간 (24시 형식)" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0"/>
+            <Grid Background="White" Height="40" Width="300">
+                <TextBox x:Name="endtimebox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Padding="10,0,0,0" FontFamily="나눔스퀘어_ac" BorderThickness="0"/>
+            </Grid>
+            <Label Content="줌 제목 (없으면 비워두세요.)" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0"/>
+            <Grid Background="White" Height="40" Width="300">
+                <TextBox x:Name="zoombox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Padding="10,0,0,0" FontFamily="나눔스퀘어_ac" BorderThickness="0"/>
+            </Grid>
+            <Label Content="링크 제목 (없으면 비워두세요.)" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0"/>
+            <Grid Background="White" Height="40" Width="300">
+                <TextBox x:Name="linkbox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center" Padding="10,0,0,0" FontFamily="나눔스퀘어_ac" BorderThickness="0"/>
+            </Grid>
+            <Label Content="저장" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,20,0,0" Background="White" HorizontalContentAlignment="Center" MouseDown="Label_MouseDown_1"/>
+            <Label Content="취소" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,5,0,0" Background="White" HorizontalContentAlignment="Center" MouseDown="Label_MouseDown"/>
+            <Label Content="삭제" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="300" Padding="10,5,5,5" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac" Margin="0,50,0,0" Background="White" HorizontalContentAlignment="Center" MouseDown="Label_MouseDown_2"/>
+          
+        </WrapPanel>
+    </Grid>
+</Page>
