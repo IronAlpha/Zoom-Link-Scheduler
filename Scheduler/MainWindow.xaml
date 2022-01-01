@@ -55,8 +55,8 @@
     <Border x:Name="baseborder" BorderBrush="Black" Background="#FFF4F4F6" Height="1000" Width="1400" CornerRadius="5">
         <Grid Background="#00000000">
             <Grid HorizontalAlignment="Left" Height="81" Margin="10,50,0,0" VerticalAlignment="Top" Width="350">
-                <Label x:Name="monthbox" Content="September" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" VerticalContentAlignment="Center" FontFamily="Roboto Regular" FontSize="30" Padding="0" Margin="0,10,0,0"/>
-                <Label x:Name="yearbox" Content="2021" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top" Height="61" VerticalContentAlignment="Center" FontFamily="Roboto Light" FontSize="30" Padding="10,0,0,0"/>
+                <Label x:Name="monthbox" Content="September" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac Bold" FontSize="30" Padding="0" Margin="0,10,0,0"/>
+                <Label x:Name="yearbox" Content="2021" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top" Height="61" VerticalContentAlignment="Center" FontFamily="나눔스퀘어_ac Light" FontSize="30" Padding="10,0,0,0"/>
             </Grid>
             <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="854" Margin="10,136,0,0" VerticalAlignment="Top" Width="1380" CornerRadius="5" Background="White">
  
