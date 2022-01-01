@@ -13,10 +13,10 @@ Imports System.Runtime
 ' 어셈블리 특성 값을 검토합니다.
 
 <Assembly: AssemblyTitle("Scheduler")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("github.com/IronAlpha/Zoom-Link-Scheduler")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Scheduler")>
-<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyCopyright("Copyright ©  2022")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
 
@@ -56,5 +56,5 @@ Imports System.Runtime
 ' 기본값으로 할 수 있습니다.
 '<Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.23.3412")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("0.3.0.0")>
+<Assembly: AssemblyFileVersion("0.3.0.0")>

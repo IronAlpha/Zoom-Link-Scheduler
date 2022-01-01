@@ -97,7 +97,7 @@ Class editzoom
         End If
         SideListPage.loadpage()
         saveZoomJson()
-
+        getZoomlist()
         MainFrm.ChangeSideMenuMode(MainWindow.SideMenuMode.List)
         GC.Collect()
     End Sub

@@ -42,7 +42,7 @@ Public Class editlink
         End If
         SideListPage.loadpage()
         saveLinkJson()
-
+        getLinklist()
         MainFrm.ChangeSideMenuMode(MainWindow.SideMenuMode.List)
         GC.Collect()
     End Sub

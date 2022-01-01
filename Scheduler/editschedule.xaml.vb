@@ -82,6 +82,7 @@
         End With
         saveTaskJson()
         ScheduleControlReturn(myschedule).LoadTask(myschedule)
+        getTasklist()
         MakeTodayList()
         MainFrm.ChangeSideMenuMode(MainWindow.SideMenuMode.Setting)
         MainFrm.SideMenuClose()

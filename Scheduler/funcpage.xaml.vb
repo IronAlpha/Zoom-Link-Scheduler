@@ -19,6 +19,7 @@
                     If tp.Title = zp.Title Then
                         tp.ZoomProp = zp
                         tp.JObject("ZoomID") = zp.ID
+                        Exit For
                     End If
                 End If
             Next
